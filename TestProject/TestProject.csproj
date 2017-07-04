@@ -51,6 +51,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stream\CopyFileConfig.cs" />
+    <Compile Include="Stream\CreateFileConfig.cs" />
+    <Compile Include="Stream\FileStreamTest.cs" />
+    <Compile Include="Stream\IFileConfig.cs" />
+    <Compile Include="Stream\StreamWriteTest.cs" />
     <Compile Include="UnitTestStream.cs" />
   </ItemGroup>
   <ItemGroup>

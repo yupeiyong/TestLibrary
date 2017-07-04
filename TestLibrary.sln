@@ -10,6 +10,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Local.testsettings = Local.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "动态规划法解兔子问题", "动态规划法解兔子问题\动态规划法解兔子问题\动态规划法解兔子问题.csproj", "{D4C3FA0C-A0D5-44BC-B0AF-DA066D466772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "分支限界法解背包问题", "分支限界法解背包问题\分支限界法解背包问题\分支限界法解背包问题.csproj", "{357A036C-5622-4821-B7C9-E90896319D4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "汉诺塔", "汉诺塔\汉诺塔\汉诺塔.csproj", "{BDEBF126-7B8A-45E6-BB8C-E3FD74E67A43}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "贪心算法", "贪心算法\贪心算法\贪心算法.csproj", "{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,6 +28,22 @@ Global
 		{1E28F7CC-6FA1-4EA2-BE39-6FF6A3FF84AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E28F7CC-6FA1-4EA2-BE39-6FF6A3FF84AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E28F7CC-6FA1-4EA2-BE39-6FF6A3FF84AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C3FA0C-A0D5-44BC-B0AF-DA066D466772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C3FA0C-A0D5-44BC-B0AF-DA066D466772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C3FA0C-A0D5-44BC-B0AF-DA066D466772}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C3FA0C-A0D5-44BC-B0AF-DA066D466772}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357A036C-5622-4821-B7C9-E90896319D4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357A036C-5622-4821-B7C9-E90896319D4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357A036C-5622-4821-B7C9-E90896319D4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357A036C-5622-4821-B7C9-E90896319D4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDEBF126-7B8A-45E6-BB8C-E3FD74E67A43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDEBF126-7B8A-45E6-BB8C-E3FD74E67A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDEBF126-7B8A-45E6-BB8C-E3FD74E67A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDEBF126-7B8A-45E6-BB8C-E3FD74E67A43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
