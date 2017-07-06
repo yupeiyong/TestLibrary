@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "汉诺塔", "汉诺塔\汉�
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "贪心算法", "贪心算法\贪心算法\贪心算法.csproj", "{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{29700433-5279-4DBA-82C2-93779B12E388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1576B08D-E6F9-45FA-913C-CF26D8E4ADF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29700433-5279-4DBA-82C2-93779B12E388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29700433-5279-4DBA-82C2-93779B12E388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29700433-5279-4DBA-82C2-93779B12E388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29700433-5279-4DBA-82C2-93779B12E388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

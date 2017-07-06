@@ -1,0 +1,8 @@
+F:\workspace\TestLibrary\TestProject\bin\Debug\WebTest1.webtest
+F:\workspace\TestLibrary\TestProject\bin\Debug\TestProject.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\TestProject.pdb
+F:\workspace\TestLibrary\TestProject\bin\Debug\Microsoft.VisualStudio.QualityTools.WebTestFramework.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.WebTestFramework.resources.dll
+F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.dll
+F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.pdb

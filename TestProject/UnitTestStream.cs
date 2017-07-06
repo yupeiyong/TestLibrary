@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Text;
+using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TestProject.Stream;
 
@@ -54,7 +53,7 @@ namespace TestProject
                     if (newPositionInStream < buffer.Length)
                     {
                         //将从新位置（第7位）一直写到buffer的末尾，注意下stream已经写入了3个数据“Str”
-                        stream.Write(buffer, (int)newPositionInStream, buffer.Length - (int)newPositionInStream);
+                        stream.Write(buffer, (int) newPositionInStream, buffer.Length - (int) newPositionInStream);
                     }
 
                     //写完后将stream的Position属性设置成0，开始读流中的数据
@@ -102,8 +101,8 @@ namespace TestProject
             {
                 while (reader.Peek() != -1)
                 {
-                    Console.WriteLine("Peek = {0}", (char)reader.Peek());
-                    Console.WriteLine("Read = {0}", (char)reader.Read());
+                    Console.WriteLine("Peek = {0}", (char) reader.Peek());
+                    Console.WriteLine("Read = {0}", (char) reader.Read());
                 }
                 reader.Close();
             }
@@ -192,7 +191,7 @@ namespace TestProject
             var result = string.Empty;
             while ((readChar = reader.Read()) != -1)
             {
-                result += (char)readChar;
+                result += (char) readChar;
             }
             Console.WriteLine("使用StreamReader.Read()方法得到Text文件中的数据为 : {0}", result);
         }
@@ -278,31 +277,34 @@ namespace TestProject
 
 
         [TestMethod]
-
         public void TestStreamWrite()
         {
             var fileName = "TextWriter.txt";
             var txtFilePath = Path.GetFullPath(fileName);
-            NumberFormatInfo numberFomatProvider = new NumberFormatInfo();
+            var numberFomatProvider = new NumberFormatInfo();
+
             //将小数 “.”换成"?"
             numberFomatProvider.PercentDecimalSeparator = "?";
             var test = new StreamWriterTest(Encoding.Default, txtFilePath, numberFomatProvider);
+
             //StreamWriter
             test.WriteSomthingToFile();
+
             //TextWriter
             test.WriteSomthingToFileByUsingTextWriter();
         }
 
 
         [TestMethod]
-
         public void TestFileStream()
         {
-            FileStreamTest test = new FileStreamTest();
+            var test = new FileStreamTest();
+
             //创建文件配置类
-            CreateFileConfig createFileConfig = new CreateFileConfig { CreateUrl = @"d:\MyFile.txt", IsAsync = true };
+            var createFileConfig = new CreateFileConfig {CreateUrl = @"d:\MyFile.txt", IsAsync = true};
+
             //复制文件配置类
-            CopyFileConfig copyFileConfig = new CopyFileConfig
+            var copyFileConfig = new CopyFileConfig
             {
                 OrginalFileUrl = @"d:\8.jpg",
                 DestinationFileUrl = @"d:\9.jpg",
@@ -314,10 +316,144 @@ namespace TestProject
 
 
         [TestMethod]
-
-        public void TestBufferStream()
+        public void TestFileStream2()
         {
+            var file = "3d_20160727.docx";
+            var uploadFile = "3d_20160727_Upload.docx";
+            var fileFullPath = Path.GetFullPath(file);
+            var uploadFileFullPath = Path.GetFullPath(uploadFile);
+            var test = new UpFileSingleTest();
+            var info = new FileInfo(fileFullPath);
 
+            //取得文件总长度
+            var fileLegth = info.Length;
+
+            //假设将文件切成5段
+            var divide = 21;
+
+            //取到每个文件段的长度
+            var perFileLengh = (int) fileLegth/divide;
+
+            //表示最后剩下的文件段长度比perFileLengh小
+            var restCount = (int) fileLegth%divide;
+
+            //循环上传数据
+            for (var i = 0; i <= divide; i++)
+            {
+                //每次定义不同的数据段,假设数据长度是500，那么每段的开始位置都是i*perFileLength
+                var startPosition = i*perFileLengh;
+
+                //取得每次数据段的数据量
+                var totalCount = fileLegth - perFileLengh*i > perFileLengh ? perFileLengh : restCount;
+
+                //上传该段数据
+                test.UpLoadFileFromLocal(fileFullPath, uploadFileFullPath, startPosition, i == divide ? divide : totalCount);
+            }
+        }
+
+
+        [TestMethod]
+        public void TestMemoryStream_OutOfMemory()
+        {
+            var testBytes = new byte[256*1024*1024];
+            var ms = new MemoryStream();
+            using (ms)
+            {
+                for (var i = 0; i < 1000; i++)
+                {
+                    try
+                    {
+                        ms.Write(testBytes, 0, testBytes.Length);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("该内存流已经使用了{0}M容量的内存,该内存流最大容量为{1}M,溢出时容量为{2}M",
+                            GC.GetTotalMemory(false)/(1024*1024), //MemoryStream已经消耗内存量
+                            ms.Capacity/(1024*1024), //MemoryStream最大的可用容量
+                            ms.Length/(1024*1024)); //MemoryStream当前流的长度（容量）
+                        break;
+                    }
+                }
+            }
+        }
+
+
+        [TestMethod]
+        public void TestMemoryStream_OutOfMemory_Of_Two()
+        {
+            var testBytes = new byte[256*1024*1024];
+            var ms = new MemoryStream();
+            var ms2 = new MemoryStream();
+            using (ms)
+            {
+                for (var i = 0; i < 1000; i++)
+                {
+                    try
+                    {
+                        ms.Write(testBytes, 0, testBytes.Length);
+                        ms2.Write(testBytes, 0, testBytes.Length);
+                    }
+                    catch
+                    {
+                        Console.WriteLine("该内存流已经使用了{0}M容量的内存,该内存流最大容量为{1}M,溢出时容量为{2}M",
+                            GC.GetTotalMemory(false)/(1024*1024), //MemoryStream已经消耗内存量
+                            ms.Capacity/(1024*1024), //MemoryStream最大的可用容量
+                            ms.Length/(1024*1024)); //MemoryStream当前流的长度（容量）
+                        break;
+                    }
+                }
+            }
+        }
+
+        [TestMethod]
+        public void TestMemoryStream_Create_XMLFile()
+        {
+            MemoryStream ms = new MemoryStream();
+            using (ms)
+            {
+                //定义一个XMLWriter
+                using (XmlWriter writer = XmlWriter.Create(ms))
+                {
+                    //写入xml头
+                    writer.WriteStartDocument(true);
+                    //写入一个元素
+                    writer.WriteStartElement("Content");
+                    //为这个元素新增一个test属性
+                    writer.WriteStartAttribute("test");
+                    //设置test属性的值
+                    writer.WriteValue("逆时针的风");
+                    //释放缓冲，这里可以不用释放，但是在实际项目中可能要考虑部分释放对性能带来的提升
+                    writer.Flush();
+                    Console.WriteLine("此时内存使用量为:{2}KB,该MemoryStream的已经使用的容量为{0}byte,默认容量为{1}byte",
+                        Math.Round((double)ms.Length, 4), ms.Capacity, GC.GetTotalMemory(false) / 1024);
+                    Console.WriteLine("重新定位前MemoryStream所在的位置是{0}", ms.Position);
+                    //将流中所在的当前位置往后移动7位，相当于空格
+                    ms.Seek(7, SeekOrigin.Current);
+                    Console.WriteLine("重新定位后MemoryStream所在的位置是{0}", ms.Position);
+                    //如果将流所在的位置设置为如下所示的位置则xml文件会被打乱
+                    //ms.Position = 0;
+                    writer.WriteStartElement("Content2");
+                    writer.WriteStartAttribute("testInner");
+                    writer.WriteValue("逆时针的风Inner");
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+                    //再次释放
+                    writer.Flush();
+                    Console.WriteLine("此时内存使用量为:{2}KB,该MemoryStream的已经使用的容量为{0}byte,默认容量为{1}byte",
+                        Math.Round((double)ms.Length, 4), ms.Capacity, GC.GetTotalMemory(false) / 1024);
+                    //建立一个FileStream  文件创建目的地是d:\test.xml
+                    FileStream fs = new FileStream(@"d:\test.xml", FileMode.OpenOrCreate);
+                    using (fs)
+                    {
+                        //将内存流注入FileStream
+                        ms.WriteTo(fs);
+                        if (ms.CanWrite)
+                            //释放缓冲区
+                            fs.Flush();
+                    }
+                }
+            }
         }
     }
+
 }

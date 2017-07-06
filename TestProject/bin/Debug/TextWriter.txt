@@ -1,0 +1,36 @@
+这个StreamWriter使用了gb2312编码
+这里简单演示下StreamWriter.Writer方法的各种重载版本
+1.Write(bool);
+2.Write(char);
+3.Write(Char[])
+4.Write(Decimal)
+5.Write(Double)
+6.Write(Int32)
+7.Write(Int64)
+8.Write(Object)
+9.Write(Char[])
+10.Write(Single)
+11.Write(Char[])
+12.Write(String)
+13Write(UInt32)
+14.Write(string format,obj)
+15.Write(Char[])
+StreamWriter.WriteLine()方法就是在加上行结束符，其余和上述方法是用一致
+这个StreamWriter使用了gb2312编码
+这里简单演示下StreamWriter.Writer方法的各种重载版本
+1.Write(bool);
+2.Write(char);
+3.Write(Char[])
+4.Write(Decimal)
+5.Write(Double)
+6.Write(Int32)
+7.Write(Int64)
+8.Write(Object)
+9.Write(Char[])
+10.Write(Single)
+11.Write(Char[])
+12.Write(String)
+13Write(UInt32)
+14.Write(string format,obj)
+15.Write(Char[])
+StreamWriter.WriteLine()方法就是在加上行结束符，其余和上述方法是用一致

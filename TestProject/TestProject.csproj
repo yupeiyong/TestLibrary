@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
@@ -56,6 +57,7 @@
     <Compile Include="Stream\FileStreamTest.cs" />
     <Compile Include="Stream\IFileConfig.cs" />
     <Compile Include="Stream\StreamWriteTest.cs" />
+    <Compile Include="Stream\UpFileSingleTest.cs" />
     <Compile Include="UnitTestStream.cs" />
   </ItemGroup>
   <ItemGroup>
