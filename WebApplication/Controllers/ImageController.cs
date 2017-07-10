@@ -113,7 +113,7 @@ namespace WebApplication.Controllers
         {
             var graphics = Graphics.FromImage(image);
             var waterImage = Image.FromFile(context.Server.MapPath("~/Images/water.jpg"));
-
+           
             //在大图右下角画上水印图就行
             graphics.DrawImage(waterImage,
                 new Point
