@@ -4,10 +4,9 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TestProject.Stream;
 
 
-namespace TestProject
+namespace TestProject.Stream
 {
 
     [TestClass]
@@ -453,6 +452,14 @@ namespace TestProject
                     }
                 }
             }
+        }
+
+
+        [TestMethod]
+        public void TestBufferedStream()
+        {
+            var server = new Server("http://www.163.com/");
+            server.FetchWebPageData();
         }
     }
 

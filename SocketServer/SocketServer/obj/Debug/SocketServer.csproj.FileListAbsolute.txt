@@ -1,0 +1,6 @@
+F:\workspace\TestLibrary\SocketServer\SocketServer\bin\Debug\SocketServer.exe.config
+F:\workspace\TestLibrary\SocketServer\SocketServer\bin\Debug\SocketServer.exe
+F:\workspace\TestLibrary\SocketServer\SocketServer\bin\Debug\SocketServer.pdb
+F:\workspace\TestLibrary\SocketServer\SocketServer\obj\Debug\SocketServer.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\SocketServer\SocketServer\obj\Debug\SocketServer.exe
+F:\workspace\TestLibrary\SocketServer\SocketServer\obj\Debug\SocketServer.pdb
