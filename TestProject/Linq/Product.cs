@@ -40,4 +40,10 @@ namespace TestProject.Linq
 
     }
 
+    public class Company
+    {
+
+        public List<Product> Products { get; set; }
+
+    }
 }

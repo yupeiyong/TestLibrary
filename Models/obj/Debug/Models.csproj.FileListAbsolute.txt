@@ -1,0 +1,4 @@
+F:\workspace\TestLibrary\Models\bin\Debug\Models.dll
+F:\workspace\TestLibrary\Models\bin\Debug\Models.pdb
+F:\workspace\TestLibrary\Models\obj\Debug\Models.dll
+F:\workspace\TestLibrary\Models\obj\Debug\Models.pdb
