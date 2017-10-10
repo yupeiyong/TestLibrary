@@ -42,6 +42,22 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="ServiceStack.Common, Version=4.5.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Common.4.5.12\lib\net45\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces, Version=4.0.0.0, Culture=neutral, PublicKeyToken=e06fbc6124f57c43, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Interfaces.4.5.12\lib\portable-wp80+sl5+net45+win8+wpa81+monotouch+monoandroid+xamarin.ios10\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Redis, Version=4.5.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Redis.4.5.12\lib\net45\ServiceStack.Redis.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Text, Version=4.5.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ServiceStack.Text.4.5.12\lib\net45\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -51,9 +67,12 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateArray\CreateArray.cs" />
+    <Compile Include="CreateArray\UnitTest1.cs" />
     <Compile Include="Linq\Product.cs" />
     <Compile Include="Linq\UnitTestLinq.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Redis\UnitTest1.cs" />
     <Compile Include="Stream\CopyFileConfig.cs" />
     <Compile Include="Stream\CreateFileConfig.cs" />
     <Compile Include="Stream\FileStreamTest.cs" />
@@ -62,8 +81,11 @@
     <Compile Include="Stream\StreamWriteTest.cs" />
     <Compile Include="Stream\UpFileSingleTest.cs" />
     <Compile Include="Stream\UnitTestStream.cs" />
+    <Compile Include="Tree\BinaryTree.cs" />
+    <Compile Include="Tree\UnitTestBinaryTree.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="WebTest1.webtest">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

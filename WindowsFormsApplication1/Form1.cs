@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApplication1.Properties;
+using ServiceStack;
+using ServiceStack.Redis;
 
 
 namespace WindowsFormsApplication1

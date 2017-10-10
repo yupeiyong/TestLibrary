@@ -16,13 +16,13 @@ namespace 分支限界法解背包问题
                 new Bag(1, 8) };
             const int totalWeight = 12;
             var problem = new Fzxj();
-            var maxValue=problem.GetMaxValue(bags, totalWeight);
-            Console.WriteLine("max value:{0}",maxValue);
+            var maxValue = problem.GetMaxValue(bags, totalWeight);
+            Console.WriteLine("max value:{0}", maxValue);
             Console.ReadKey();
         }
     }
 
-    public class Bag:IComparable<Bag>
+    public class Bag : IComparable<Bag>
     {
 
         public int Weight { get; set; }
@@ -55,20 +55,20 @@ namespace 分支限界法解背包问题
         }
 
 
-        public int GetMaxValue(List<Bag>bags,int totalWeight)
+        public int GetMaxValue(List<Bag> bags, int totalWeight)
         {
             var maxValue = 0;
             _totalWeight = totalWeight;
             _bags = bags;
             _bags.Sort();
-            var queue=new Queue<Node>();
-           queue.Enqueue(new Node(0,0,0));
+            var queue = new Queue<Node>();
+            queue.Enqueue(new Node(0, 0, 0));
             while (queue.Count > 0)
             {
                 var node = queue.Dequeue();
                 var index = node.Index;
-                if (node.UpboundValue<maxValue ||node.Index>=_bags.Count) continue;
-                var left=new Node(node.CurWeight+bags[index].Weight,node.CurValue+bags[index].Value,index+1);
+                if (node.UpboundValue < maxValue || node.Index >= _bags.Count) continue;
+                var left = new Node(node.CurWeight + bags[index].Weight, node.CurValue + bags[index].Value, index + 1);
                 left.UpboundValue = GetUpboundValue(left);
                 if (left.UpboundValue > maxValue && left.CurWeight <= totalWeight)
                 {
@@ -78,7 +78,7 @@ namespace 分支限界法解背包问题
                         maxValue = left.CurValue;
                     }
                 }
-                var right=new Node(node.CurWeight,node.CurValue,index+1);
+                var right = new Node(node.CurWeight, node.CurValue, index + 1);
                 right.UpboundValue = GetUpboundValue(right);
                 if (right.UpboundValue >= maxValue)
                 {

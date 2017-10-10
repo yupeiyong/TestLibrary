@@ -6,3 +6,11 @@ F:\workspace\TestLibrary\TestProject\bin\Debug\zh-Hans\Microsoft.VisualStudio.Qu
 F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
 F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.dll
 F:\workspace\TestLibrary\TestProject\obj\Debug\TestProject.pdb
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Common.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Interfaces.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Redis.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Text.dll
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Common.xml
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Interfaces.xml
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Redis.xml
+F:\workspace\TestLibrary\TestProject\bin\Debug\ServiceStack.Text.xml
