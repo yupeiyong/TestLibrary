@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="8d05d54d-0b5b-4b77-b370-db593b9ec28b"
+  name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="3a59bb65-f3ed-48da-8282-b417f15f74a8">
+      <body>currentIndex=middleIndex</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="daeb1674-92b1-49d4-b371-79ec23fe0959"
+          LastKnownName="当前索引位置＝中间索引位置"
+          LastKnownLocation="ModelingProject1.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="e488d21d-4f81-49fb-b57a-3be27daac4a0"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <opaqueAction
+            Id="daeb1674-92b1-49d4-b371-79ec23fe0959"
+            name="当前索引位置＝中间索引位置"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="132e0492-b3eb-4c8b-bd90-e8755f46267b"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f7a98ad4-dd16-470f-8329-9ec3eb5270b8"
+                  LastKnownName="i=leftIndexArrary[middleIndex]"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="f7a98ad4-dd16-470f-8329-9ec3eb5270b8"
+            name="i=leftIndexArrary[middleIndex]"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1b55567a-3df7-4528-8685-ef1f9f2a163b"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="38e6bad8-6600-4a75-8100-f0ade9d2ef09"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="38e6bad8-6600-4a75-8100-f0ade9d2ef09"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ec1a88fd-8d86-478c-bec0-fb48ea73b807"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="03a4f45c-8590-496f-aec5-a3aded23384b"
+                  LastKnownName="记录组合数"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="03a4f45c-8590-496f-aec5-a3aded23384b"
+            name="记录组合数"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b481dccf-a764-4e28-9206-0fc603a7a944"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c026636a-eb72-4b9e-b52c-35a5805be0e8"
+                  LastKnownName="i++"
+                  LastKnownLocation="ModelingProject1.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c026636a-eb72-4b9e-b52c-35a5805be0e8"
+            name="i++"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

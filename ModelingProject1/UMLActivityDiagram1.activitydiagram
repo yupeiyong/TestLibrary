@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="d3c2efdb-191e-4ae8-8ef2-cf9aa4fe5b3a" name="Activity1" linkedPackageId="4ed78cb2-8413-46ca-9dba-ba6d860f4cb9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="b4ca2289-a89f-468a-9da8-fdf80cd14ae2">
+      <elementDefinition Id="3a59bb65-f3ed-48da-8282-b417f15f74a8" />
+      <body>currentIndex=middleIndex</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="4688a916-e850-41c1-8dbf-57109f0a61d3" LastKnownName="当前索引位置＝中间索引位置" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="6c9e9e40-193e-4921-8232-508775aae880">
+      <profileInstance Id="27c574bb-d93a-4e1a-9889-67f172e43bc4" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3600c6d3-1f77-44fe-a037-b05ecfa65e8f">
+      <profileInstance Id="f091a5fd-cd10-4b49-9b97-9b488a6af8b9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="5a41ff7a-a800-49d6-8950-98c5c9eba880" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="e488d21d-4f81-49fb-b57a-3be27daac4a0" />
+        <nodes>
+          <opaqueAction Id="4688a916-e850-41c1-8dbf-57109f0a61d3" name="当前索引位置＝中间索引位置" isLeaf="false">
+            <elementDefinition Id="daeb1674-92b1-49d4-b371-79ec23fe0959" />
+            <flowNodeTargets>
+              <controlFlow Id="f85021c8-8771-4543-b290-bc94ea6caa9e" isLeaf="false">
+                <opaqueActionMoniker Id="d6065faf-8250-4ead-b122-f342fe5c291a" LastKnownName="i=leftIndexArrary[middleIndex]" />
+                <elementDefinition Id="132e0492-b3eb-4c8b-bd90-e8755f46267b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="d6065faf-8250-4ead-b122-f342fe5c291a" name="i=leftIndexArrary[middleIndex]" isLeaf="false">
+            <elementDefinition Id="f7a98ad4-dd16-470f-8329-9ec3eb5270b8" />
+            <flowNodeTargets>
+              <controlFlow Id="281068ee-cb69-4bdb-a0e7-edac266fc2b6" isLeaf="false">
+                <decisionNodeMoniker Id="b01ff563-e5a5-4adc-a455-823ed632be71" LastKnownName="Decision1" />
+                <elementDefinition Id="1b55567a-3df7-4528-8685-ef1f9f2a163b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="b01ff563-e5a5-4adc-a455-823ed632be71" name="Decision1" isLeaf="false">
+            <elementDefinition Id="38e6bad8-6600-4a75-8100-f0ade9d2ef09" />
+            <flowNodeTargets>
+              <controlFlow Id="d06697b2-9085-4221-af6f-4ce13c761702" isLeaf="false">
+                <opaqueActionMoniker Id="ad9c4a7f-d410-4ae0-997e-d731e8f066cf" LastKnownName="记录组合数" />
+                <elementDefinition Id="ec1a88fd-8d86-478c-bec0-fb48ea73b807" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="ad9c4a7f-d410-4ae0-997e-d731e8f066cf" name="记录组合数" isLeaf="false">
+            <elementDefinition Id="03a4f45c-8590-496f-aec5-a3aded23384b" />
+            <flowNodeTargets>
+              <controlFlow Id="0895f9e6-f7ad-4b8d-bfa0-b748050aee7b" isLeaf="false">
+                <opaqueActionMoniker Id="95222a2d-f0b1-4d0e-bc8e-e16e76ba9b5d" LastKnownName="i++" />
+                <elementDefinition Id="b481dccf-a764-4e28-9206-0fc603a7a944" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="95222a2d-f0b1-4d0e-bc8e-e16e76ba9b5d" name="i++" isLeaf="false">
+            <elementDefinition Id="c026636a-eb72-4b9e-b52c-35a5805be0e8" />
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="4ed78cb2-8413-46ca-9dba-ba6d860f4cb9" name="ModelingProject1">
+    <elementDefinition Id="8d05d54d-0b5b-4b77-b370-db593b9ec28b" />
+  </package>
+</activityRootModel>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLActivityDiagram1">
+  <activityRootModelMoniker Id="d3c2efdb-191e-4ae8-8ef2-cf9aa4fe5b3a" />
+  <nestedChildShapes>
+    <actionShape Id="66e203ab-29dc-4fa8-814c-0832152d134c" absoluteBounds="1.5, 1.125, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="4688a916-e850-41c1-8dbf-57109f0a61d3" LastKnownName="当前索引位置＝中间索引位置" />
+    </actionShape>
+    <commentShape Id="3f2561db-5a6f-4b63-8aa0-b3f0d8c07e95" absoluteBounds="0.5, 0.5, 2, 0.375" customColor="251, 247, 200">
+      <commentMoniker Id="b4ca2289-a89f-468a-9da8-fdf80cd14ae2" />
+      <relativeChildShapes />
+    </commentShape>
+    <commentConnector edgePoints="[(2 : 0.875); (2 : 1.125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+      <relativeChildShapes />
+      <nodes>
+        <commentShapeMoniker Id="3f2561db-5a6f-4b63-8aa0-b3f0d8c07e95" />
+        <actionShapeMoniker Id="66e203ab-29dc-4fa8-814c-0832152d134c" />
+      </nodes>
+    </commentConnector>
+    <actionShape Id="0c2c050a-928f-42e7-a79d-6238d0553259" absoluteBounds="1.5, 1.875, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="d6065faf-8250-4ead-b122-f342fe5c291a" LastKnownName="i=leftIndexArrary[middleIndex]" />
+    </actionShape>
+    <decisionNodeShape Id="3ccb81f0-6c8c-4793-b03e-18cefbcd260a" absoluteBounds="1.875, 2.75, 0.375, 0.375" customColor="185, 212, 238">
+      <decisionNodeMoniker Id="b01ff563-e5a5-4adc-a455-823ed632be71" LastKnownName="Decision1" />
+      <relativeChildShapes />
+    </decisionNodeShape>
+    <controlFlowConnector edgePoints="[(2.0625 : 2.25); (2.0625 : 2.75)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="281068ee-cb69-4bdb-a0e7-edac266fc2b6" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="0c2c050a-928f-42e7-a79d-6238d0553259" />
+        <decisionNodeShapeMoniker Id="3ccb81f0-6c8c-4793-b03e-18cefbcd260a" />
+      </nodes>
+    </controlFlowConnector>
+    <actionShape Id="ab745558-0847-49a1-a245-696a0cb96fd4" absoluteBounds="1.5, 3.375, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="ad9c4a7f-d410-4ae0-997e-d731e8f066cf" LastKnownName="记录组合数" />
+    </actionShape>
+    <actionShape Id="508141bd-9e0a-4b59-87ff-b344618d0b1b" absoluteBounds="3.125, 2.125, 1.125, 0.375" customColor="161, 199, 231">
+      <opaqueActionMoniker Id="95222a2d-f0b1-4d0e-bc8e-e16e76ba9b5d" LastKnownName="i++" />
+    </actionShape>
+    <controlFlowConnector edgePoints="[(2.0625 : 3.125); (2.0625 : 3.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="d06697b2-9085-4221-af6f-4ce13c761702" />
+      <relativeChildShapes />
+      <nodes>
+        <decisionNodeShapeMoniker Id="3ccb81f0-6c8c-4793-b03e-18cefbcd260a" />
+        <actionShapeMoniker Id="ab745558-0847-49a1-a245-696a0cb96fd4" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(2.625 : 3.5625); (3.6875 : 3.5625); (3.6875 : 2.5)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="0895f9e6-f7ad-4b8d-bfa0-b748050aee7b" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="ab745558-0847-49a1-a245-696a0cb96fd4" />
+        <actionShapeMoniker Id="508141bd-9e0a-4b59-87ff-b344618d0b1b" />
+      </nodes>
+    </controlFlowConnector>
+    <controlFlowConnector edgePoints="[(2.0625 : 1.5); (2.0625 : 1.875)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="Black">
+      <controlFlowMoniker Id="f85021c8-8771-4543-b290-bc94ea6caa9e" />
+      <relativeChildShapes />
+      <nodes>
+        <actionShapeMoniker Id="66e203ab-29dc-4fa8-814c-0832152d134c" />
+        <actionShapeMoniker Id="0c2c050a-928f-42e7-a79d-6238d0553259" />
+      </nodes>
+    </controlFlowConnector>
+  </nestedChildShapes>
+</activityDiagram>
