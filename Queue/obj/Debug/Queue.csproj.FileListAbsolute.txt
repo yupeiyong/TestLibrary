@@ -1,0 +1,6 @@
+F:\workspace\TestLibrary\Queue\bin\Debug\Queue.exe.config
+F:\workspace\TestLibrary\Queue\bin\Debug\Queue.exe
+F:\workspace\TestLibrary\Queue\bin\Debug\Queue.pdb
+F:\workspace\TestLibrary\Queue\obj\Debug\Queue.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\Queue\obj\Debug\Queue.exe
+F:\workspace\TestLibrary\Queue\obj\Debug\Queue.pdb
