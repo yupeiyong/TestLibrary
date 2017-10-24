@@ -10,3 +10,11 @@ F:\workspace\TestLibrary\WindowsFormsApplication1\obj\Debug\WindowsFormsApplicat
 F:\workspace\TestLibrary\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmActionButtonColumn.resources
 F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\Models.dll
 F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\Models.pdb
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Common.dll
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Interfaces.dll
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Redis.dll
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Text.dll
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Common.xml
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Interfaces.xml
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Redis.xml
+F:\workspace\TestLibrary\WindowsFormsApplication1\bin\Debug\ServiceStack.Text.xml
