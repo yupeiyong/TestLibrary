@@ -4,7 +4,7 @@
 namespace Stack
 {
     /// <summary>
-    /// 
+    /// 泛型栈
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class Stack<T>
@@ -19,14 +19,14 @@ namespace Stack
         public Stack()
         {
             _size = 8;
-            _datas=new T[_size];
+            _datas = new T[_size];
         }
         public void Push(T data)
         {
             if (Count == _size)
             {
                 _size = _size * 2;
-                var tmp=new T[_size];
+                var tmp = new T[_size];
                 for (int i = 0, maxCount = _datas.Length; i < maxCount; i++)
                 {
                     tmp[i] = _datas[i];
@@ -40,7 +40,7 @@ namespace Stack
 
         public T Pop()
         {
-            if(IsEmpty())
+            if (IsEmpty())
                 throw new Exception("栈为空！");
 
             var index = Count - 1;
@@ -74,33 +74,22 @@ namespace Stack
 
         public int Count { get; private set; }
 
-        private StackNode<T> _head = null;
+        private StackNode<T> _top = null;
         public LinkStack()
         {
-            _head = new StackNode<T>
-            {
-                Data = default(T),
-                Next = null
-            };
+
         }
         public void Push(T data)
         {
-            if (_head == null)
+            var node = new StackNode<T> { Data = data, Next = null };
+            if (_top == null)
             {
-                _head = new StackNode<T> {Data = data, Next = null};
+                _top = node;
             }
             else
             {
-                var node= new StackNode<T> { Data = data, Next = null };
-                var parent = _head;
-                var curNode = _head.Next;
-                while (curNode != null)
-                {
-                    parent = curNode;
-                    curNode = curNode.Next;
-                }
-                curNode = node;
-                parent.Next = curNode;
+                node.Next = _top;
+                _top = node;
             }
             Count++;
         }
@@ -111,18 +100,8 @@ namespace Stack
             if (IsEmpty())
                 throw new Exception("栈为空！");
 
-            if (IsEmpty())
-                throw new Exception("栈为空！");
-
-            var parentNode = _head;
-            var curNode = _head.Next;
-            while (curNode.Next != null)
-            {
-                parentNode = curNode;
-                curNode = curNode.Next;
-            }
-            var data = curNode.Data;
-            parentNode.Next = null;
+            var data = _top.Data;
+            _top = _top.Next;
             Count--;
             return data;
         }
@@ -130,22 +109,14 @@ namespace Stack
 
         public bool IsEmpty()
         {
-            return Count == 0 || _head.Next==null;
+            return Count == 0 || _top == null;
         }
         public T GetTop()
         {
             if (IsEmpty())
                 throw new Exception("栈为空！");
 
-            var curNode = _head.Next;
-            var parentNode = _head;
-            while (curNode.Next != null)
-            {
-                parentNode = curNode;
-                curNode = curNode.Next;
-            }
-            var data = curNode.Data;
-            return data;
+            return _top.Data;
         }
     }
 }
