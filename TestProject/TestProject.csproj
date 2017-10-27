@@ -67,6 +67,8 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompositeNumber\CompositeNumber.cs" />
+    <Compile Include="CompositeNumber\UnitTestCompositeNumber.cs" />
     <Compile Include="CreateArray\CreateArray.cs" />
     <Compile Include="CreateArray\UnitTest1.cs" />
     <Compile Include="Linq\Product.cs" />
