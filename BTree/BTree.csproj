@@ -45,9 +45,9 @@
   <ItemGroup>
     <Compile Include="B+T.cs" />
     <Compile Include="BTree.cs" />
+    <Compile Include="BTreeNode.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
