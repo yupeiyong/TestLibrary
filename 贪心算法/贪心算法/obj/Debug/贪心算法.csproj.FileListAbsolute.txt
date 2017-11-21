@@ -4,9 +4,3 @@ F:\我的工作区\我的程序\贪心算法\贪心算法\bin\Debug\贪心算法
 F:\我的工作区\我的程序\贪心算法\贪心算法\obj\Debug\贪心算法.csprojResolveAssemblyReference.cache
 F:\我的工作区\我的程序\贪心算法\贪心算法\obj\Debug\贪心算法.exe
 F:\我的工作区\我的程序\贪心算法\贪心算法\obj\Debug\贪心算法.pdb
-F:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.exe.config
-F:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.exe
-F:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.pdb
-F:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.csprojResolveAssemblyReference.cache
-F:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.exe
-F:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.pdb

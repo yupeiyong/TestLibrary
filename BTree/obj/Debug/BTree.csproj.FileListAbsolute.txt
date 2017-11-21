@@ -1,6 +1,0 @@
-F:\workspace\TestLibrary\BTree\bin\Debug\BTree.exe.config
-F:\workspace\TestLibrary\BTree\bin\Debug\BTree.exe
-F:\workspace\TestLibrary\BTree\bin\Debug\BTree.pdb
-F:\workspace\TestLibrary\BTree\obj\Debug\BTree.csprojResolveAssemblyReference.cache
-F:\workspace\TestLibrary\BTree\obj\Debug\BTree.exe
-F:\workspace\TestLibrary\BTree\obj\Debug\BTree.pdb
