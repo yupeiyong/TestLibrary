@@ -140,7 +140,7 @@ namespace BTree
             {
                 leftNode.Keys[i] = node.Keys[M + i];
             }
-            if (node.IsLeaf)
+            if (!node.IsLeaf)
             {
                 for (var i = 0; i < M; i++)
                 {
@@ -160,9 +160,9 @@ namespace BTree
             parentNode.Children[position + 1] = leftNode;
 
             //父结点的关键字向后移动
-            for (var i = parentNode.NodeCount; i >= position; i--)
+            for (var i = parentNode.NodeCount-1; i >= position; i--)
             {
-                parentNode.Children[i + 1] = parentNode.Children[i];
+                parentNode.Keys[i + 1] = parentNode.Keys[i];
             }
 
             parentNode.Keys[position] = node.Keys[M - 1];
@@ -211,15 +211,15 @@ namespace BTree
         private static void TraverseNode(BTreeNode<T> node, Action<T> action)
         {
             var i = 0;
-            for (; i < node.Keys.Length; i++)
+            for (; i < node.NodeCount; i++)
             {
-                if (!node.Children[i].IsLeaf)
+                if (!node.IsLeaf)
                 {
                     TraverseNode(node.Children[i], action);
                 }
                 action(node.Keys[i]);
             }
-            if (!node.Children[i].IsLeaf)
+            if (!node.IsLeaf)
                 TraverseNode(node.Children[i], action);
         }
 
