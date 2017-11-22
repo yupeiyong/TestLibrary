@@ -28,7 +28,7 @@ namespace BTree
         ///     关键字数量M-1到M*2-1
         ///     子结点数量M到M*2
         /// </summary>
-        public int M { get; set; }
+        public int M { get; set; } 
 
 
         #region 删除
