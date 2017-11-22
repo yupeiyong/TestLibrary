@@ -1,6 +1,0 @@
-F:\workspace\TestLibrary\Stack\bin\Debug\Stack.exe.config
-F:\workspace\TestLibrary\Stack\bin\Debug\Stack.exe
-F:\workspace\TestLibrary\Stack\bin\Debug\Stack.pdb
-F:\workspace\TestLibrary\Stack\obj\Debug\Stack.csprojResolveAssemblyReference.cache
-F:\workspace\TestLibrary\Stack\obj\Debug\Stack.exe
-F:\workspace\TestLibrary\Stack\obj\Debug\Stack.pdb

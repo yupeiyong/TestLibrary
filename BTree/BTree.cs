@@ -32,9 +32,17 @@ namespace BTree
 
 
         #region 删除
-
+         
         /// <summary>
         ///     删除关键字
+        ///     1、关键字在非叶子结点，找到左子树中最小关键字（一直找到叶子结点为止），当前关键字替换为最小关键字，然后此最小关键字
+        ///     2、关键字在叶子结点
+        ///         2.1、结点的关键字数量是否小于M-1？不小于，直接删除，
+        ///             2.1.1、不小于，直接删除
+        ///             2.1.2、检查右兄弟结点关键字数量，大于M，删除关键字，父结点关键字移到当前位置，兄弟结点最小关键字移到父结点，
+        ///                     如果右兄弟不大于M，检查左兄弟，符合条件就执行相同动作
+        ///                 2.1.2.1、左右兄弟结点均不大于M，删除关键字，再将当前结点+父结点+右兄弟结点合并，
+        ///                         如父结点关键字数量小于M-1，则执行相同动作直到符合M阶
         /// </summary>
         /// <param name="keyword"></param>
         public void Remove(T keyword)
@@ -64,12 +72,12 @@ namespace BTree
                     IsLeaf = true
                 };
                 _root.Keys[0] = keyword;
-                _root.NodeCount = 1;
+                _root.KeywordsCount = 1;
             }
             else
             {
                 //结点已满,先分裂根结点，再插入关键字
-                if (_root.NodeCount == 2 * M - 1)
+                if (_root.KeywordsCount == 2 * M - 1)
                 {
                     var parentNode = new BTreeNode<T>
                     {
@@ -98,22 +106,22 @@ namespace BTree
         {
             if (node.IsLeaf)
             {
-                var i = node.NodeCount - 1;
+                var i = node.KeywordsCount - 1;
                 while (i >= 0 && node.Keys[i].CompareTo(keyword) > 0)
                 {
                     node.Keys[i + 1] = node.Keys[i];
                     i--;
                 }
                 node.Keys[i + 1] = keyword;
-                node.NodeCount++;
+                node.KeywordsCount++;
             }
             else
             {
-                var i = node.NodeCount - 1;
+                var i = node.KeywordsCount - 1;
                 while (i >= 0 && node.Keys[i].CompareTo(keyword) > 0)
                     i--;
 
-                if (node.Children[i + 1].NodeCount == 2 * M - 1)
+                if (node.Children[i + 1].KeywordsCount == 2 * M - 1)
                 {
                     SplitNode(node, i + 1, node.Children[i + 1]);
                     i = 0;
@@ -133,8 +141,9 @@ namespace BTree
                 Keys = new T[M * 2 - 1],
                 Children = new BTreeNode<T>[M * 2],
                 IsLeaf = node.IsLeaf,
-                NodeCount = M - 1
+                KeywordsCount = M - 1
             };
+
             //复制左部到新结点
             for (var i = 0; i < M - 1; i++)
             {
@@ -147,12 +156,13 @@ namespace BTree
                     leftNode.Children[i] = node.Children[M + i];
                 }
             }
+
             //调整结点现有数量
-            node.NodeCount = M - 1;
+            node.KeywordsCount = M - 1;
 
             //调整父结点
             //父结点的子树向后移动
-            for (var i = parentNode.NodeCount; i >= position + 1; i--)
+            for (var i = parentNode.KeywordsCount; i >= position + 1; i--)
             {
                 parentNode.Children[i + 1] = parentNode.Children[i];
             }
@@ -160,13 +170,13 @@ namespace BTree
             parentNode.Children[position + 1] = leftNode;
 
             //父结点的关键字向后移动
-            for (var i = parentNode.NodeCount-1; i >= position; i--)
+            for (var i = parentNode.KeywordsCount - 1; i >= position; i--)
             {
                 parentNode.Keys[i + 1] = parentNode.Keys[i];
             }
 
             parentNode.Keys[position] = node.Keys[M - 1];
-            parentNode.NodeCount++;
+            parentNode.KeywordsCount++;
         }
 
         #endregion
@@ -179,18 +189,39 @@ namespace BTree
         /// </summary>
         /// <param name="keyword"></param>
         /// <returns></returns>
-        public BTreeNode<T> Search(T keyword)
+        public BTreeSearchResult<T> Search(T keyword)
         {
             return SearchNode(_root, keyword);
         }
 
 
-        private BTreeNode<T> SearchNode(BTreeNode<T> node, T keyword)
+        private BTreeSearchResult<T> SearchNode(BTreeNode<T> node, T keyword)
         {
             var i = 0;
-            while (i < node.NodeCount && node.Keys[i].CompareTo(keyword) < 0) i++;
-            if (node.Keys[i].CompareTo(keyword) == 0) return node;
+            while (i < node.KeywordsCount && node.Keys[i].CompareTo(keyword) < 0) i++;
+            if (node.Keys[i].CompareTo(keyword) == 0) return new BTreeSearchResult<T> { Node = node, KeywordPosition = i };
             return node.IsLeaf ? null : SearchNode(node.Children[i], keyword);
+        }
+
+
+        /// <summary>
+        ///     在指定结点关键字的左孩子中查找最小关键字结点
+        /// </summary>
+        /// <param name="node"></param>
+        /// <returns></returns>
+        public BTreeSearchResult<T> FindMinKeywordNodeInLeftChildren(BTreeNode<T> node)
+        {
+            while (true)
+            {
+                if (node == null)
+                    throw new Exception("指定的结点为空！");
+
+                if (node.KeywordsCount < 0)
+                    throw new Exception("指定的关键字位置不正确！");
+
+                if (node.IsLeaf) return new BTreeSearchResult<T> { Node = node, KeywordPosition = 0 };
+                node = node.Children[0];
+            }
         }
 
         #endregion
@@ -211,7 +242,7 @@ namespace BTree
         private static void TraverseNode(BTreeNode<T> node, Action<T> action)
         {
             var i = 0;
-            for (; i < node.NodeCount; i++)
+            for (; i < node.KeywordsCount; i++)
             {
                 if (!node.IsLeaf)
                 {

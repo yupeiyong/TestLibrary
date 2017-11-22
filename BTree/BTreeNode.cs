@@ -12,9 +12,9 @@ namespace BTree
     {
 
         /// <summary>
-        ///     结点数量
+        ///     关键字数量
         /// </summary>
-        public int NodeCount { get; set; }
+        public int KeywordsCount { get; set; }
 
 
         /// <summary>

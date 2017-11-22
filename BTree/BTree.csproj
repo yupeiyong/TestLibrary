@@ -46,6 +46,7 @@
     <Compile Include="B+T.cs" />
     <Compile Include="BTree.cs" />
     <Compile Include="BTreeNode.cs" />
+    <Compile Include="BTreeSearchResult.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
