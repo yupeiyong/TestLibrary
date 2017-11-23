@@ -24,25 +24,25 @@ namespace BTree
         /// <summary>
         ///     M阶
         ///     每个结点最小的度，
-        ///     其中根结点最小子树>=2(因为是平衡树，所以子树必须大于1) 
+        ///     其中根结点最小子树>=2(因为是平衡树，所以子树必须大于1)
         ///     关键字数量M-1到M*2-1
         ///     子结点数量M到M*2
         /// </summary>
-        public int M { get; set; } 
+        public int M { get; set; }
 
 
         #region 删除
-         
+
         /// <summary>
         ///     删除关键字
         ///     1、关键字在非叶子结点，找到左子树中最小关键字（一直找到叶子结点为止），当前关键字替换为最小关键字，然后此最小关键字
         ///     2、关键字在叶子结点
-        ///         2.1、结点的关键字数量是否小于M-1？不小于，直接删除，
-        ///             2.1.1、不小于，直接删除
-        ///             2.1.2、检查右兄弟结点关键字数量，大于M，删除关键字，父结点关键字移到当前位置，兄弟结点最小关键字移到父结点，
-        ///                     如果右兄弟不大于M，检查左兄弟，符合条件就执行相同动作
-        ///                 2.1.2.1、左右兄弟结点均不大于M，删除关键字，再将当前结点+父结点+右兄弟结点合并，
-        ///                         如父结点关键字数量小于M-1，则执行相同动作直到符合M阶
+        ///     2.1、结点的关键字数量是否小于M-1？不小于，直接删除，
+        ///     2.1.1、不小于，直接删除
+        ///     2.1.2、检查右兄弟结点关键字数量，大于M，删除关键字，父结点关键字移到当前位置，兄弟结点最小关键字移到父结点，
+        ///     如果右兄弟不大于M，检查左兄弟，符合条件就执行相同动作
+        ///     2.1.2.1、左右兄弟结点均不大于M，删除关键字，再将当前结点+父结点+右兄弟结点合并，
+        ///     如父结点关键字数量小于M-1，则执行相同动作直到符合M阶
         /// </summary>
         /// <param name="keyword"></param>
         public void Remove(T keyword)
@@ -63,12 +63,13 @@ namespace BTree
         public void Insert(T keyword)
         {
             //根结点为空
+            //初始化根结点
             if (_root == null)
             {
                 _root = new BTreeNode<T>
                 {
-                    Keys = new T[M * 2 - 1],
-                    Children = new BTreeNode<T>[M * 2],
+                    Keys = new T[M*2 - 1],
+                    Children = new BTreeNode<T>[M*2],
                     IsLeaf = true
                 };
                 _root.Keys[0] = keyword;
@@ -77,20 +78,28 @@ namespace BTree
             else
             {
                 //结点已满,先分裂根结点，再插入关键字
-                if (_root.KeywordsCount == 2 * M - 1)
+                if (_root.KeywordsCount == 2*M - 1)
                 {
+                    //新结点，分裂出来的结点将插入到新结点中
                     var parentNode = new BTreeNode<T>
                     {
-                        Keys = new T[M * 2 - 1],
-                        Children = new BTreeNode<T>[M * 2],
+                        Keys = new T[M*2 - 1],
+                        Children = new BTreeNode<T>[M*2],
                         IsLeaf = false
                     };
+
+                    //第一个子结点引用根结点
                     parentNode.Children[0] = _root;
+
+                    //分裂根结点，分裂出来的关键字插入索引位置＝0
                     SplitNode(parentNode, 0, _root);
+
+                    //分裂出来的关键字有两个子结点，判断应该插入哪个子结点，左或右？
                     var i = 0;
                     if (parentNode.Keys[0].CompareTo(keyword) < 0)
                         i++;
 
+                    //关键字插入到子结点
                     InsertNonFull(parentNode.Children[i], keyword);
                     _root = parentNode;
                 }
@@ -103,8 +112,16 @@ namespace BTree
         }
 
 
+        /// <summary>
+        ///     插入关键字到非满结点
+        ///     关键字必须插入到叶结点
+        /// </summary>
+        /// <param name="node"></param>
+        /// <param name="keyword"></param>
         private void InsertNonFull(BTreeNode<T> node, T keyword)
         {
+            //是否为叶结点
+            //直接插入关键字到结点
             if (node.IsLeaf)
             {
                 var i = node.KeywordsCount - 1;
@@ -118,17 +135,23 @@ namespace BTree
             }
             else
             {
+                //先找出关键字在关键字数组中的位置
                 var i = node.KeywordsCount - 1;
                 while (i >= 0 && node.Keys[i].CompareTo(keyword) > 0)
                     i--;
 
-                if (node.Children[i + 1].KeywordsCount == 2 * M - 1)
+                //子结点关键字数组是否已满
+                if (node.Children[i + 1].KeywordsCount == 2*M - 1)
                 {
+                    //先分裂子结点
                     SplitNode(node, i + 1, node.Children[i + 1]);
-                    i = 0;
-                    if (node.Keys[0].CompareTo(keyword) < 0)
+
+                    //分裂出来的结点有左右两个子结点，判断应该插入哪个结点，左或右？
+                    if (node.Keys[i + 1].CompareTo(keyword) < 0)
                         i++;
                 }
+
+                //插入关键字到子结点
                 InsertNonFull(node.Children[i + 1], keyword);
             }
         }
@@ -139,19 +162,37 @@ namespace BTree
             //新结点
             var leftNode = new BTreeNode<T>
             {
-                Keys = new T[M * 2 - 1],
-                Children = new BTreeNode<T>[M * 2],
+                Keys = new T[M*2 - 1],
+                Children = new BTreeNode<T>[M*2],
                 IsLeaf = node.IsLeaf,
                 KeywordsCount = M - 1
             };
 
             //复制左部到新结点
+            /*
+             如M阶为4，关键字数组满的话，如下：
+             0 1 2 M 4 5 6
+             M-1＝3正好在中间位置
+             */
             for (var i = 0; i < M - 1; i++)
             {
                 leftNode.Keys[i] = node.Keys[M + i];
             }
             if (!node.IsLeaf)
             {
+                //非叶子结点，复制子结点到新结点
+                /*
+                 如M阶为4，关键字数组满的话，如下：
+                 关键字：0   1   2   M   4   5   6
+                 子结点：P0  P1  P2  PM  P4  P5  P6   P7
+                 M正好在中间位置
+                 新结点关键字 4 5 6
+                 对应的子结点 P4  P5  P6   P7
+                 原结点关键字 0   1   2
+                 对应的子结点 P0  P1  P2  PM
+                 中间结点M将会被分裂出去
+                 */
+
                 for (var i = 0; i < M; i++)
                 {
                     leftNode.Children[i] = node.Children[M + i];
@@ -162,21 +203,41 @@ namespace BTree
             node.KeywordsCount = M - 1;
 
             //调整父结点
-            //父结点的子树向后移动
-            for (var i = parentNode.KeywordsCount; i >= position + 1; i--)
-            {
-                parentNode.Children[i + 1] = parentNode.Children[i];
-            }
+            /*
+             父结点原关键字和子结点如下：
+                关键字：0   1   2   
+                子结点：P0  P1  P2  PM  
 
-            parentNode.Children[position + 1] = leftNode;
-
+             */
             //父结点的关键字向后移动
             for (var i = parentNode.KeywordsCount - 1; i >= position; i--)
             {
                 parentNode.Keys[i + 1] = parentNode.Keys[i];
             }
 
+            //父结点的子树向后移动
+            for (var i = parentNode.KeywordsCount; i >= position + 1; i--)
+            {
+                parentNode.Children[i + 1] = parentNode.Children[i];
+            }
+            /*
+             父结点现在关键字和子结点如下：
+                关键字：0   1   position  2   
+                子结点：P0  P1  P2  position+1 PM  
+                position为待记录位置
+             */
+
+            //记录中间关键字和子结点 M-1为中间索引
             parentNode.Keys[position] = node.Keys[M - 1];
+            parentNode.Children[position + 1] = leftNode;
+            /*
+             父结点现在关键字和子结点如下：
+                关键字：0   1   中间位置关键字  2   
+                子结点：P0  P1  P2  leftNode  PM  
+                其中leftNode中的关键字都大于中间位置关键字
+             */
+
+            //父结点关键字数量递增
             parentNode.KeywordsCount++;
         }
 
@@ -200,7 +261,7 @@ namespace BTree
         {
             var i = 0;
             while (i < node.KeywordsCount && node.Keys[i].CompareTo(keyword) < 0) i++;
-            if (node.Keys[i].CompareTo(keyword) == 0) return new BTreeSearchResult<T> { Node = node, KeywordPosition = i };
+            if (node.Keys[i].CompareTo(keyword) == 0) return new BTreeSearchResult<T> {Node = node, KeywordPosition = i};
             return node.IsLeaf ? null : SearchNode(node.Children[i], keyword);
         }
 
@@ -220,7 +281,7 @@ namespace BTree
                 if (node.KeywordsCount < 0)
                     throw new Exception("指定的关键字位置不正确！");
 
-                if (node.IsLeaf) return new BTreeSearchResult<T> { Node = node, KeywordPosition = 0 };
+                if (node.IsLeaf) return new BTreeSearchResult<T> {Node = node, KeywordPosition = 0};
                 node = node.Children[0];
             }
         }
