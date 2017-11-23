@@ -9,3 +9,9 @@ F:\workspace\TestLibrary\汉诺塔\汉诺塔\bin\Debug\汉诺塔.exe
 F:\workspace\TestLibrary\汉诺塔\汉诺塔\bin\Debug\汉诺塔.pdb
 F:\workspace\TestLibrary\汉诺塔\汉诺塔\obj\Debug\汉诺塔.exe
 F:\workspace\TestLibrary\汉诺塔\汉诺塔\obj\Debug\汉诺塔.pdb
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\bin\Debug\汉诺塔.exe.config
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\bin\Debug\汉诺塔.exe
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\bin\Debug\汉诺塔.pdb
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\obj\Debug\汉诺塔.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\obj\Debug\汉诺塔.exe
+E:\workspace\TestLibrary\汉诺塔\汉诺塔\obj\Debug\汉诺塔.pdb

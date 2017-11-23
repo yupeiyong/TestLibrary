@@ -9,3 +9,9 @@ F:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.exe
 F:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.pdb
 F:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.exe
 F:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.pdb
+E:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.exe.config
+E:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.exe
+E:\workspace\TestLibrary\贪心算法\贪心算法\bin\Debug\贪心算法.pdb
+E:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.exe
+E:\workspace\TestLibrary\贪心算法\贪心算法\obj\Debug\贪心算法.pdb
