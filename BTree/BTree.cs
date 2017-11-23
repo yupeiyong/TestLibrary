@@ -82,7 +82,8 @@ namespace BTree
                     var parentNode = new BTreeNode<T>
                     {
                         Keys = new T[M * 2 - 1],
-                        Children = new BTreeNode<T>[M * 2]
+                        Children = new BTreeNode<T>[M * 2],
+                        IsLeaf = false
                     };
                     parentNode.Children[0] = _root;
                     SplitNode(parentNode, 0, _root);

@@ -1,0 +1,5 @@
+F:\workspace\TestLibrary\Link\bin\Debug\Link.exe.config
+F:\workspace\TestLibrary\Link\bin\Debug\Link.exe
+F:\workspace\TestLibrary\Link\bin\Debug\Link.pdb
+F:\workspace\TestLibrary\Link\obj\Debug\Link.exe
+F:\workspace\TestLibrary\Link\obj\Debug\Link.pdb
