@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="B+T.cs" />
     <Compile Include="BTree.cs" />
     <Compile Include="BTreeNode.cs" />
     <Compile Include="BTreeSearchResult.cs" />
