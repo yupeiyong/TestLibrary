@@ -5,7 +5,7 @@ namespace BTree
 {
 
     /// <summary>
-    ///     B树 平衡多路查找树
+    ///     B树 平衡多路查找树,平衡性和多叉性
     ///     树的高度决定了读取磁盘的次数，因为是多叉，高度比二叉查找树少了很多，所以相对来说读取次数也少了很多
     /// </summary>
     /// <typeparam name="T">泛型类型，实现了IComparable接口的类型</typeparam>
@@ -47,8 +47,45 @@ namespace BTree
         /// <param name="keyword"></param>
         public void Remove(T keyword)
         {
+            var result = Search(keyword);
+            if (result != null)
+            {
+                if (result.Node.IsLeaf)
+                {
+                    //大于M阶，直接删除
+                    if (result.Node.Keys.Length > M)
+                    {
+                        var n = result.KeywordPosition;
+
+                        while (n < result.Node.KeywordsCount-1)
+                        {
+                            result.Node.Keys[n] = result.Node.Keys[n + 1];
+                        }
+                        result.Node.KeywordsCount--;
+                    }
+                }
+                else
+                {
+                    var minNode = FindMinKeywordNodeInLeftChildren(result.Node.Children[result.KeywordPosition + 1]);
+                    var minKeyword = minNode.Node.Keys[minNode.KeywordPosition];
+                    Remove(minKeyword);
+                }
+            }
         }
 
+        /// <summary>
+        /// 当前结点和父结点关键字和兄弟结点关键字合并
+        /// </summary>
+        private void Merge()
+        {
+            
+        }
+
+
+        private void Rotate()
+        {
+            
+        }
         #endregion
 
 
@@ -253,16 +290,16 @@ namespace BTree
         /// <returns></returns>
         public BTreeSearchResult<T> Search(T keyword)
         {
-            return SearchNode(_root, keyword);
+            return SearchNode(_root, keyword, null);
         }
 
 
-        private BTreeSearchResult<T> SearchNode(BTreeNode<T> node, T keyword)
+        private BTreeSearchResult<T> SearchNode(BTreeNode<T> node, T keyword, BTreeNode<T> parent)
         {
             var i = 0;
             while (i < node.KeywordsCount && node.Keys[i].CompareTo(keyword) < 0) i++;
             if (node.Keys[i].CompareTo(keyword) == 0) return new BTreeSearchResult<T> {Node = node, KeywordPosition = i};
-            return node.IsLeaf ? null : SearchNode(node.Children[i], keyword);
+            return node.IsLeaf ? null : SearchNode(node.Children[i], keyword, node);
         }
 
 
