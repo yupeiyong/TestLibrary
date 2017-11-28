@@ -3,3 +3,8 @@ F:\workspace\TestLibrary\Queue\bin\Debug\Queue.exe
 F:\workspace\TestLibrary\Queue\bin\Debug\Queue.pdb
 F:\workspace\TestLibrary\Queue\obj\Debug\Queue.exe
 F:\workspace\TestLibrary\Queue\obj\Debug\Queue.pdb
+E:\workspace\TestLibrary\Queue\bin\Debug\Queue.exe.config
+E:\workspace\TestLibrary\Queue\bin\Debug\Queue.exe
+E:\workspace\TestLibrary\Queue\bin\Debug\Queue.pdb
+E:\workspace\TestLibrary\Queue\obj\Debug\Queue.exe
+E:\workspace\TestLibrary\Queue\obj\Debug\Queue.pdb
