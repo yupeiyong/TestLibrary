@@ -17,6 +17,12 @@ namespace BTree
         public BTreeNode<T> Node { get; set; }
 
 
+        ///// <summary>
+        /////     父结点
+        ///// </summary>
+        //public BTreeNode<T> Parent { get; set; }
+
+
         /// <summary>
         ///     关键字位置
         /// </summary>

@@ -204,7 +204,7 @@ namespace BTree
             // Moving the child pointers after (idx+1) in the current node one
             // step before
             for (int i = index + 2; i <= node.KeywordsCount; ++i)
-                node.Keys[i - 1] = node.Keys[i];
+                node.Children[i - 1] = node.Children[i];
 
             // Updating the key count of child and the current node
             leftChild.KeywordsCount += rightChild.KeywordsCount + 1;
