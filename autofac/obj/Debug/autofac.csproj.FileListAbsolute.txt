@@ -1,0 +1,8 @@
+F:\workspace\TestLibrary\autofac\bin\Debug\autofac.exe.config
+F:\workspace\TestLibrary\autofac\bin\Debug\autofac.exe
+F:\workspace\TestLibrary\autofac\bin\Debug\autofac.pdb
+F:\workspace\TestLibrary\autofac\bin\Debug\Autofac.dll
+F:\workspace\TestLibrary\autofac\bin\Debug\Autofac.xml
+F:\workspace\TestLibrary\autofac\obj\Debug\autofac.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\autofac\obj\Debug\autofac.exe
+F:\workspace\TestLibrary\autofac\obj\Debug\autofac.pdb
