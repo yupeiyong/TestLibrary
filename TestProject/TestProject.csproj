@@ -72,6 +72,7 @@
     <Compile Include="CompositeNumber\UnitTestCompositeNumber.cs" />
     <Compile Include="CreateArray\CreateArray.cs" />
     <Compile Include="CreateArray\UnitTest1.cs" />
+    <Compile Include="Float\UnitTestFloat.cs" />
     <Compile Include="Linq\Product.cs" />
     <Compile Include="Linq\UnitTestLinq.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +94,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
