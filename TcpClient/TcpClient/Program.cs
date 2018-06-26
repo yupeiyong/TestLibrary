@@ -19,7 +19,8 @@ namespace TcpClient
         {
             Console.Title = "tcp client";
             Socket client = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            client.Connect(IPAddress.Parse(GetLocalIP()), 5600); //NO.1 
+            var ip = GetLocalIP();
+            client.Connect(IPAddress.Parse(ip), 5600); //NO.1 
             Console.WriteLine("[" + DateTime.Now.ToLongTimeString() + "] 连接服务器成功...");
             new Thread(new ParameterizedThreadStart(ReceiveThread)).Start(client); //NO. 
             string input = "";

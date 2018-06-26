@@ -19,9 +19,10 @@ namespace TcpServer
             //声明一个socket
             var server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             const int port = 5600;
-            server.Bind(new IPEndPoint(IPAddress.Any, port));
+            var ipAddress = IPAddress.Any;
+            server.Bind(new IPEndPoint(ipAddress, port));
             server.Listen(20);
-            Console.WriteLine("服务端开始侦听...(端口:" + port + ")");
+            Console.WriteLine($"服务端开始侦听...(IP:{ipAddress.ToString()},端口:{port })");
             do
             {
                 var proxySocket = server.Accept();
