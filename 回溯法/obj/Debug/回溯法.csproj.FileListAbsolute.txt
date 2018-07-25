@@ -4,3 +4,9 @@ F:\workspace\TestLibrary\回溯法\bin\Debug\回溯法.pdb
 F:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.csprojResolveAssemblyReference.cache
 F:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.exe
 F:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.pdb
+E:\workspace\TestLibrary\回溯法\bin\Debug\回溯法.exe.config
+E:\workspace\TestLibrary\回溯法\bin\Debug\回溯法.exe
+E:\workspace\TestLibrary\回溯法\bin\Debug\回溯法.pdb
+E:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.exe
+E:\workspace\TestLibrary\回溯法\obj\Debug\回溯法.pdb

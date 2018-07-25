@@ -3,3 +3,8 @@ F:\workspace\TestLibrary\Stack\bin\Debug\Stack.exe
 F:\workspace\TestLibrary\Stack\bin\Debug\Stack.pdb
 F:\workspace\TestLibrary\Stack\obj\Debug\Stack.exe
 F:\workspace\TestLibrary\Stack\obj\Debug\Stack.pdb
+E:\workspace\TestLibrary\Stack\bin\Debug\Stack.exe.config
+E:\workspace\TestLibrary\Stack\bin\Debug\Stack.exe
+E:\workspace\TestLibrary\Stack\bin\Debug\Stack.pdb
+E:\workspace\TestLibrary\Stack\obj\Debug\Stack.exe
+E:\workspace\TestLibrary\Stack\obj\Debug\Stack.pdb

@@ -1,9 +1,12 @@
-﻿using System;
+﻿using HD.DBHelper;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using 生产者消费者;
 
 namespace 生产者消费者1
 {
@@ -11,21 +14,63 @@ namespace 生产者消费者1
     {
         public static void Main(String[] args)
         {
+            //Test();
+            //先插入指定数量的用户数据
+            var count = 1000 * 1000;
+            //AddDatas(count);
+            var factory = new DbFactory(100);
+            var read = new ReadUser(factory);
+            var producer = new Thread(read.Start);
+
+            var consumers = new List<Thread>();
+            for(var i = 0; i < 100; i++)
+            {
+                var consumer = new UpdateUser(factory);
+                consumers.Add(new Thread(consumer.Start));
+            }
+            producer.Start();
+            foreach(var t in consumers)
+            {
+                t.Start();
+            }
+            producer.Join();
+            foreach (var t in consumers)
+            {
+                t.Join();
+            }
+            Console.ReadKey();
+        }
+
+        private static void AddDatas(int count)
+        {
+            string sql = @"INSERT INTO [dbo].[Users]
+           ([UserName])
+                VALUES
+           (@UserName)";
+            for(var i = 0; i < count; i++)
+            {
+                SqlParameter[] parameters = new SqlParameter[] {
+                new SqlParameter("@UserName",$"User{i}")};
+                DbHelperSQL.ExecuteSql(sql, parameters);
+            }            
+        }
+        private static void Test()
+        {
             int result = 0; //一个标志位，如果是0表示程序没有出错，如果是1表明有错误发生
             Factory factory = new Factory();
 
             //下面使用cell初始化CellProd和CellCons两个类，生产和消费次数均为20次
-            var prod = new Producer(factory,1);
+            var prod = new Producer(factory, 1);
             var cons = new Consumer(factory);
 
-            var prod2 = new Producer(factory,21);
+            var prod2 = new Producer(factory, 21);
             var cons2 = new Consumer(factory);
 
 
-            var prod3 = new Producer(factory,41);
+            var prod3 = new Producer(factory, 41);
             var cons3 = new Consumer(factory);
 
-            var prod4 = new Producer(factory,61);
+            var prod4 = new Producer(factory, 61);
             var cons4 = new Consumer(factory);
 
             Thread producer1 = new Thread(new ThreadStart(prod.Run));

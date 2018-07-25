@@ -9,3 +9,9 @@ F:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子
 F:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\bin\Debug\动态规划法解兔子问题.pdb
 F:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\obj\Debug\动态规划法解兔子问题.exe
 F:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\obj\Debug\动态规划法解兔子问题.pdb
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\bin\Debug\动态规划法解兔子问题.exe.config
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\bin\Debug\动态规划法解兔子问题.exe
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\bin\Debug\动态规划法解兔子问题.pdb
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\obj\Debug\动态规划法解兔子问题.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\obj\Debug\动态规划法解兔子问题.exe
+E:\workspace\TestLibrary\动态规划法解兔子问题\动态规划法解兔子问题\obj\Debug\动态规划法解兔子问题.pdb

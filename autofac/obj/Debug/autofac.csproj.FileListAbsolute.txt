@@ -9,3 +9,8 @@ F:\workspace\TestLibrary\autofac\obj\Debug\autofac.pdb
 E:\workspace\TestLibrary\autofac\bin\Debug\autofac.exe.config
 E:\workspace\TestLibrary\autofac\obj\Debug\autofac.exe
 E:\workspace\TestLibrary\autofac\obj\Debug\autofac.pdb
+E:\workspace\TestLibrary\autofac\bin\Debug\autofac.exe
+E:\workspace\TestLibrary\autofac\bin\Debug\autofac.pdb
+E:\workspace\TestLibrary\autofac\bin\Debug\Autofac.dll
+E:\workspace\TestLibrary\autofac\bin\Debug\Autofac.xml
+E:\workspace\TestLibrary\autofac\obj\Debug\autofac.csprojResolveAssemblyReference.cache
