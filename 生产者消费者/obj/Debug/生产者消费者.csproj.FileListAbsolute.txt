@@ -4,3 +4,9 @@ E:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.pdb
 E:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.csprojResolveAssemblyReference.cache
 E:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.exe
 E:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.pdb
+F:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.exe.config
+F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.exe
+F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.pdb
+F:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.exe
+F:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.pdb
+F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.csprojResolveAssemblyReference.cache

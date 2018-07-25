@@ -1,0 +1,6 @@
+F:\workspace\TestLibrary\TcpServer\TcpServer\bin\Debug\TcpServer.exe.config
+F:\workspace\TestLibrary\TcpServer\TcpServer\bin\Debug\TcpServer.exe
+F:\workspace\TestLibrary\TcpServer\TcpServer\bin\Debug\TcpServer.pdb
+F:\workspace\TestLibrary\TcpServer\TcpServer\obj\Debug\TcpServer.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\TcpServer\TcpServer\obj\Debug\TcpServer.exe
+F:\workspace\TestLibrary\TcpServer\TcpServer\obj\Debug\TcpServer.pdb

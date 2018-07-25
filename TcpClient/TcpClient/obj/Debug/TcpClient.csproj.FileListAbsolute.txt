@@ -1,1 +1,6 @@
 F:\workspace\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.exe.config
+F:\workspace\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.exe
+F:\workspace\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.pdb
+F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.exe
+F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.pdb
