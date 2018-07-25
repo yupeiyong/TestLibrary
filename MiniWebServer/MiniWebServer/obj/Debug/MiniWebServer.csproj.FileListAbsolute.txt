@@ -4,3 +4,6 @@ E:\workspace\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.pdb
 E:\workspace\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.csprojResolveAssemblyReference.cache
 E:\workspace\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.exe
 E:\workspace\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.pdb
+E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.exe.config
+E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.exe
+E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.pdb
