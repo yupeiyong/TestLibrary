@@ -3,3 +3,8 @@ F:\workspace\TestLibrary\Tree\bin\Debug\Tree.exe
 F:\workspace\TestLibrary\Tree\bin\Debug\Tree.pdb
 F:\workspace\TestLibrary\Tree\obj\Debug\Tree.exe
 F:\workspace\TestLibrary\Tree\obj\Debug\Tree.pdb
+E:\workspace\TestLibrary\Tree\bin\Debug\Tree.exe.config
+E:\workspace\TestLibrary\Tree\bin\Debug\Tree.exe
+E:\workspace\TestLibrary\Tree\bin\Debug\Tree.pdb
+E:\workspace\TestLibrary\Tree\obj\Debug\Tree.exe
+E:\workspace\TestLibrary\Tree\obj\Debug\Tree.pdb

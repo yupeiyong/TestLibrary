@@ -10,3 +10,9 @@ F:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包
 F:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.exe
 F:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.pdb
 F:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\bin\Debug\分支限界法解背包问题.exe.config
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\bin\Debug\分支限界法解背包问题.exe
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\bin\Debug\分支限界法解背包问题.pdb
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.exe
+E:\workspace\TestLibrary\分支限界法解背包问题\分支限界法解背包问题\obj\Debug\分支限界法解背包问题.pdb

@@ -3,3 +3,8 @@ F:\workspace\TestLibrary\Link\bin\Debug\Link.exe
 F:\workspace\TestLibrary\Link\bin\Debug\Link.pdb
 F:\workspace\TestLibrary\Link\obj\Debug\Link.exe
 F:\workspace\TestLibrary\Link\obj\Debug\Link.pdb
+E:\workspace\TestLibrary\Link\bin\Debug\Link.exe.config
+E:\workspace\TestLibrary\Link\bin\Debug\Link.exe
+E:\workspace\TestLibrary\Link\bin\Debug\Link.pdb
+E:\workspace\TestLibrary\Link\obj\Debug\Link.exe
+E:\workspace\TestLibrary\Link\obj\Debug\Link.pdb
