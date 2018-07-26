@@ -22,7 +22,7 @@ namespace 生产者消费者1
             var cons2 = new Consumer(factory);
 
 
-            var prod3 = new Producer(factory,41);
+            var prod3 = new Producer(factory,41);  
             var cons3 = new Consumer(factory);
 
             var prod4 = new Producer(factory,61);
