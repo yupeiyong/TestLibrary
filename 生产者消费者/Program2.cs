@@ -1,9 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using HD.DBHelper;
+using 生产者消费者;
+
 
 namespace 生产者消费者1
 {
@@ -11,21 +15,70 @@ namespace 生产者消费者1
     {
         public static void Main(String[] args)
         {
+            Test_MultiThreadUpdateUsers();
+            Console.ReadKey();
+            //Test();
+        }
+
+
+        private static void Test_MultiThreadUpdateUsers()
+        {
+            //先插入指定条数数据
+            AddUsers(50000);
+
+            var factory = new DbFactory(50);
+            //读取线程
+            var producer=new ReadUser(factory);
+            var producerThread=new Thread(producer.Start);
+            producerThread.Start();
+            //更新线程
+            var consumerThreads=new List<Thread>();
+            for (var i = 0; i < 100; i++)
+            {
+                var consumer=new UpdateUser(factory);
+                consumerThreads.Add(new Thread(consumer.Start));
+            }
+            foreach (var t in consumerThreads)
+            {
+                t.Start();
+            }
+
+            producerThread.Join();
+
+            foreach (var t in consumerThreads)
+            {
+                t.Join();
+            }
+        }
+
+
+        private static void AddUsers(int count)
+        {
+            var sqlStr = @"INSERT INTO [dbo].[Users]([UserName])VALUES(@userName)";
+            for (var i = 0; i < count; i++)
+            {
+                var userName = $"user{i}";
+                DbHelperSQL.ExecuteSql(sqlStr, new SqlParameter("@userName",userName));
+            }
+        }
+
+        private static void Test()
+        {
             int result = 0; //一个标志位，如果是0表示程序没有出错，如果是1表明有错误发生
             Factory factory = new Factory();
 
             //下面使用cell初始化CellProd和CellCons两个类，生产和消费次数均为20次
-            var prod = new Producer(factory,1);
+            var prod = new Producer(factory, 1);
             var cons = new Consumer(factory);
 
-            var prod2 = new Producer(factory,21);
+            var prod2 = new Producer(factory, 21);
             var cons2 = new Consumer(factory);
 
 
-            var prod3 = new Producer(factory,41);  
+            var prod3 = new Producer(factory, 41);
             var cons3 = new Consumer(factory);
 
-            var prod4 = new Producer(factory,61);
+            var prod4 = new Producer(factory, 61);
             var cons4 = new Consumer(factory);
 
             Thread producer1 = new Thread(new ThreadStart(prod.Run));
@@ -85,6 +138,7 @@ namespace 生产者消费者1
             Environment.ExitCode = result;
         }
     }
+
 
     class Factory
     {
