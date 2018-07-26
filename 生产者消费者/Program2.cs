@@ -1,71 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
-using HD.DBHelper;
-using 生产者消费者;
 
 
 namespace 生产者消费者1
 {
-    class Program2
+
+    internal class Program2
     {
-        public static void Main(String[] args)
+
+        public static void Main2(string[] args)
         {
-            Test_MultiThreadUpdateUsers();
+            Test();
             Console.ReadKey();
-            //Test();
         }
 
-
-        private static void Test_MultiThreadUpdateUsers()
-        {
-            //先插入指定条数数据
-            AddUsers(50000);
-
-            var factory = new DbFactory(50);
-            //读取线程
-            var producer=new ReadUser(factory);
-            var producerThread=new Thread(producer.Start);
-            producerThread.Start();
-            //更新线程
-            var consumerThreads=new List<Thread>();
-            for (var i = 0; i < 100; i++)
-            {
-                var consumer=new UpdateUser(factory);
-                consumerThreads.Add(new Thread(consumer.Start));
-            }
-            foreach (var t in consumerThreads)
-            {
-                t.Start();
-            }
-
-            producerThread.Join();
-
-            foreach (var t in consumerThreads)
-            {
-                t.Join();
-            }
-        }
-
-
-        private static void AddUsers(int count)
-        {
-            var sqlStr = @"INSERT INTO [dbo].[Users]([UserName])VALUES(@userName)";
-            for (var i = 0; i < count; i++)
-            {
-                var userName = $"user{i}";
-                DbHelperSQL.ExecuteSql(sqlStr, new SqlParameter("@userName",userName));
-            }
-        }
 
         private static void Test()
         {
-            int result = 0; //一个标志位，如果是0表示程序没有出错，如果是1表明有错误发生
-            Factory factory = new Factory();
+            var result = 0; //一个标志位，如果是0表示程序没有出错，如果是1表明有错误发生
+            var factory = new Factory();
 
             //下面使用cell初始化CellProd和CellCons两个类，生产和消费次数均为20次
             var prod = new Producer(factory, 1);
@@ -81,17 +34,18 @@ namespace 生产者消费者1
             var prod4 = new Producer(factory, 61);
             var cons4 = new Consumer(factory);
 
-            Thread producer1 = new Thread(new ThreadStart(prod.Run));
-            Thread consumer1 = new Thread(new ThreadStart(cons.Run));
+            var producer1 = new Thread(prod.Run);
+            var consumer1 = new Thread(cons.Run);
 
-            Thread producer2 = new Thread(new ThreadStart(prod2.Run));
-            Thread consumer2 = new Thread(new ThreadStart(cons2.Run));
+            var producer2 = new Thread(prod2.Run);
+            var consumer2 = new Thread(cons2.Run);
 
-            Thread producer3 = new Thread(new ThreadStart(prod3.Run));
-            Thread consumer3 = new Thread(new ThreadStart(cons3.Run));
+            var producer3 = new Thread(prod3.Run);
+            var consumer3 = new Thread(cons3.Run);
 
-            Thread producer4 = new Thread(new ThreadStart(prod4.Run));
-            Thread consumer4 = new Thread(new ThreadStart(cons4.Run));
+            var producer4 = new Thread(prod4.Run);
+            var consumer4 = new Thread(cons4.Run);
+
             //生产者线程和消费者线程都已经被创建，但是没有开始执行 
             try
             {
@@ -134,17 +88,20 @@ namespace 生产者消费者1
                 Console.WriteLine(e);
                 result = 1;
             }
+
             //尽管Main()函数没有返回值，但下面这条语句可以向父进程返回执行结果
             Environment.ExitCode = result;
         }
+
     }
 
-
-    class Factory
+    internal class Factory
     {
+
         private readonly int[] _list = new int[10];
 
-        private int _count = 0;
+        private int _count;
+
 
         public void Push(int value)
         {
@@ -176,35 +133,42 @@ namespace 生产者消费者1
                 Monitor.PulseAll(this);
                 return value;
             }
-
         }
 
-
     }
-    class Producer
+
+    internal class Producer
     {
+
         private Factory factory;
         private int start;
-        public Producer(Factory factory,int start)
+
+
+        public Producer(Factory factory, int start)
         {
             this.factory = factory;
             this.start = start;
         }
 
+
         public void Run()
         {
-            for (var i = start; i < start+20; i++)
+            for (var i = start; i < start + 20; i++)
             {
                 factory.Push(i);
                 var id = Thread.CurrentThread.ManagedThreadId;
                 Console.WriteLine($"生产{id}：{i}");
             }
         }
+
     }
 
-    class Consumer
+    internal class Consumer
     {
+
         private Factory factory;
+
+
         public Consumer(Factory factory)
         {
             this.factory = factory;
@@ -215,10 +179,12 @@ namespace 生产者消费者1
         {
             for (var i = 0; i < 20; i++)
             {
-                var value=factory.Pop();
-                var id=Thread.CurrentThread.ManagedThreadId;
+                var value = factory.Pop();
+                var id = Thread.CurrentThread.ManagedThreadId;
                 Console.WriteLine($"消费者{id}：{value}");
             }
         }
+
     }
+
 }

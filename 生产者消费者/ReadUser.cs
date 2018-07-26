@@ -26,8 +26,17 @@ namespace 生产者消费者
 
             while (!_factory.Completed)
             {
-                _factory.Push(GetUsers(100));
-                Console.WriteLine("读入100条数据到内存");
+                var users = GetUsers(100);
+                var count = users.Count;
+                if (count > 0)
+                {
+                    _factory.Push(users);
+                    Console.WriteLine($"读入{count}条数据到内存");
+                }
+                else
+                {
+                    break;
+                }
             }
         }
 
