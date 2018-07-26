@@ -15,11 +15,10 @@ namespace 生产者消费者
         public static void Main(string[] args)
         {
             //AddUsers(50000);
-            //Test_MultiThreadUpdateUsers();
-            Test_UpdateUsers();
+            Test_MultiThreadUpdateUsers();
+            //Test_UpdateUsers();
             Console.ReadKey();
         }
-
 
         /// <summary>
         ///     多线程更新用户数据，使用生产者消费者模式
