@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace 生产者消费者
 {
+    /// <summary>
+    /// 生产者消费者测试
+    /// </summary>
     public class MonitorSample
     {
-        public static void Main2(String[] args)
+        public static void Main1(String[] args)
         {
             int result = 0; //一个标志位，如果是0表示程序没有出错，如果是1表明有错误发生
             Factory factory = new Factory();
