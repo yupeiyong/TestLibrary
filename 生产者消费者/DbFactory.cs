@@ -1,25 +1,26 @@
-﻿using System;
-
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace 生产者消费者
 {
+
     public class DbFactory
     {
+
+        private int _maxCount;
         private Queue<Users> _queue;
+
+        public bool Completed;
+
+
         public DbFactory(int maxCount)
         {
             _queue = new Queue<Users>();
-            this._maxCount = maxCount;
+            _maxCount = maxCount;
         }
 
-        private int _maxCount;
 
-        public bool Completed;
         public void Push(List<Users> users)
         {
             lock (this)
@@ -34,15 +35,15 @@ namespace 生产者消费者
                     {
                         _queue.Enqueue(user);
                     }
-
                 }
                 else
                 {
                     Completed = true;
                 }
                 Monitor.PulseAll(this);
-            }            
+            }
         }
+
 
         public Users Pop()
         {
@@ -50,16 +51,25 @@ namespace 生产者消费者
             {
                 while (_queue.Count == 0)
                 {
-                    Monitor.Wait(this);
+                    if (!Completed)
+                    {
+                        Monitor.Wait(this);
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
                 Users user = null;
-                if (!Completed)
+                if (_queue.Count > 0)
                 {
                     user = _queue.Dequeue();
                 }
                 Monitor.PulseAll(this);
                 return user;
-            }           
+            }
         }
+
     }
+
 }

@@ -14,6 +14,7 @@ namespace 生产者消费者
 
         public static void Main(string[] args)
         {
+            //AddUsers(50000);
             //Test_MultiThreadUpdateUsers();
             Test_UpdateUsers();
             Console.ReadKey();
@@ -59,6 +60,7 @@ namespace 生产者消费者
             watch.Stop();
             var userSeconds = (double) (watch.ElapsedMilliseconds/1000);
             Console.WriteLine($"多线程，生产者消费者模式，共用时：{userSeconds} 秒");
+            //多线程，生产者消费者模式，共用时：561 秒
         }
 
 
@@ -77,9 +79,9 @@ namespace 生产者消费者
                 var users = userReader.GetUsers(100);
                 
                 var count = users.Count;
-                Console.WriteLine($"读入{count}条数据到内存");
                 if (count > 0)
                 {
+                    Console.WriteLine($"读入{count}条数据到内存");
                     foreach (var user in users)
                     {
                         updater.Update(user);
@@ -95,6 +97,8 @@ namespace 生产者消费者
             watch.Stop();
             var userSeconds = (double)(watch.ElapsedMilliseconds / 1000);
             Console.WriteLine($"正常方法，更新用户数据，共用时：{userSeconds} 秒");
+            //正常方法，更新用户数据，共用时：660 秒
+            //正常方法，更新用户数据，共用时：475 秒
         }
 
 
