@@ -93,8 +93,10 @@ namespace 生产者消费者
             {
                 var user = _factory.Pop();
                 if (user != null)
+                {
                     Update(user);
-                Console.WriteLine("更新一条数据");
+                    Console.WriteLine($"更新了Id={user.UserID}的用户数据");
+                }
             }
         }
 

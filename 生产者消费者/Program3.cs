@@ -14,11 +14,15 @@ namespace 生产者消费者
 
         public static void Main(string[] args)
         {
-            Test_MultiThreadUpdateUsers();
+            //Test_MultiThreadUpdateUsers();
+            Test_UpdateUsers();
             Console.ReadKey();
         }
 
 
+        /// <summary>
+        ///     多线程更新用户数据，使用生产者消费者模式
+        /// </summary>
         private static void Test_MultiThreadUpdateUsers()
         {
             //先插入指定条数数据
@@ -54,7 +58,43 @@ namespace 生产者消费者
 
             watch.Stop();
             var userSeconds = (double) (watch.ElapsedMilliseconds/1000);
-            Console.WriteLine($"共用时：{userSeconds} 秒");
+            Console.WriteLine($"多线程，生产者消费者模式，共用时：{userSeconds} 秒");
+        }
+
+
+        /// <summary>
+        ///     一般模式更新用户数据
+        /// </summary>
+        private static void Test_UpdateUsers()
+        {
+            var watch = new Stopwatch();
+            watch.Start();
+
+            var userReader=new ReadUser(null);
+            var updater=new UpdateUser(null);
+            while (true)
+            {
+                var users = userReader.GetUsers(100);
+                
+                var count = users.Count;
+                Console.WriteLine($"读入{count}条数据到内存");
+                if (count > 0)
+                {
+                    foreach (var user in users)
+                    {
+                        updater.Update(user);
+                        Console.WriteLine($"更新了Id={user.UserID}的用户数据");
+                    }
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
+            watch.Stop();
+            var userSeconds = (double)(watch.ElapsedMilliseconds / 1000);
+            Console.WriteLine($"正常方法，更新用户数据，共用时：{userSeconds} 秒");
         }
 
 
