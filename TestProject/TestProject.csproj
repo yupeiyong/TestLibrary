@@ -75,6 +75,7 @@
     <Compile Include="Float\UnitTestFloat.cs" />
     <Compile Include="Linq\Product.cs" />
     <Compile Include="Linq\UnitTestLinq.cs" />
+    <Compile Include="ProducerConsumer\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redis\UnitTest1.cs" />
     <Compile Include="Stream\CopyFileConfig.cs" />
