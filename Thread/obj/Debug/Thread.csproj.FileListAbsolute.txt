@@ -1,0 +1,6 @@
+E:\workspace\TestLibrary\Thread\bin\Debug\Thread.exe.config
+E:\workspace\TestLibrary\Thread\bin\Debug\Thread.exe
+E:\workspace\TestLibrary\Thread\bin\Debug\Thread.pdb
+E:\workspace\TestLibrary\Thread\obj\Debug\Thread.csprojResolveAssemblyReference.cache
+E:\workspace\TestLibrary\Thread\obj\Debug\Thread.exe
+E:\workspace\TestLibrary\Thread\obj\Debug\Thread.pdb

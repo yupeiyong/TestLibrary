@@ -86,6 +86,7 @@
     <Compile Include="Stream\StreamWriteTest.cs" />
     <Compile Include="Stream\UpFileSingleTest.cs" />
     <Compile Include="Stream\UnitTestStream.cs" />
+    <Compile Include="Threads\UnitTestAwait.cs" />
     <Compile Include="Threads\UnitTestThreadStaticLock.cs" />
     <Compile Include="Threads\UnitTestThreadWithoutLock.cs" />
     <Compile Include="Tree\BinaryTree.cs" />
