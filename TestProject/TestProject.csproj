@@ -86,8 +86,11 @@
     <Compile Include="Stream\StreamWriteTest.cs" />
     <Compile Include="Stream\UpFileSingleTest.cs" />
     <Compile Include="Stream\UnitTestStream.cs" />
+    <Compile Include="Threads\UnitTestThreadStaticLock.cs" />
+    <Compile Include="Threads\UnitTestThreadWithoutLock.cs" />
     <Compile Include="Tree\BinaryTree.cs" />
     <Compile Include="Tree\UnitTestBinaryTree.cs" />
+    <Compile Include="Threads\UnitTestThreadInstanceLock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
