@@ -1,1 +1,8 @@
 E:\workspace\TestLibrary\Thread\bin\Debug\async_await.exe.config
+F:\workspace\TestLibrary\Thread\bin\Debug\async_await.exe.config
+F:\workspace\TestLibrary\Thread\bin\Debug\async_await.exe
+F:\workspace\TestLibrary\Thread\bin\Debug\async_await.pdb
+F:\workspace\TestLibrary\Thread\obj\Debug\async_await.exe
+F:\workspace\TestLibrary\Thread\obj\Debug\async_await.pdb
+F:\workspace\TestLibrary\Thread\obj\Debug\async_await.csprojAssemblyReference.cache
+F:\workspace\TestLibrary\Thread\obj\Debug\async_await.csproj.CoreCompileInputs.cache

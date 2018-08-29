@@ -9,4 +9,5 @@ F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.exe
 F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.pdb
 F:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.exe
 F:\workspace\TestLibrary\生产者消费者\bin\Debug\生产者消费者.pdb
-F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.csprojResolveAssemblyReference.cache
+F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.csprojAssemblyReference.cache
+F:\workspace\TestLibrary\生产者消费者\obj\Debug\生产者消费者.csproj.CoreCompileInputs.cache

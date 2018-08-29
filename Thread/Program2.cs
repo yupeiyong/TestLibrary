@@ -21,7 +21,7 @@ namespace async_await
             const string UserDirectory = @"files\";
             const int BufferSize = 1024 * 4;
 
-            static void Main(string[] args)
+            static void Main2(string[] args)
             {
                 AppDomain.CurrentDomain.ProcessExit += (sender, eventArgs) =>
                 {
