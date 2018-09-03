@@ -20,7 +20,7 @@ namespace 生产者消费者
         }
 
 
-        public void Start()
+        public void Start() 
         {
             if (_factory == null)
                 return;
