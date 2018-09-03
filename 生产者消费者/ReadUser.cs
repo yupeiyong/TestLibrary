@@ -25,7 +25,7 @@ namespace 生产者消费者
             if (_factory == null)
                 return;
 
-            while (!_factory.Completed)
+            while (!_factory.Completed) 
             {
                 var users = GetUsers(100);
                 var count = users.Count;
