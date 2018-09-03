@@ -30,7 +30,7 @@ namespace 生产者消费者
                 var users = GetUsers(100);
                 var count = users.Count;
                 _factory.Push(users);
-                if (count > 0)
+                if (count > 0) 
                 {
                     Console.WriteLine($"读入{count}条数据到内存");
                 }
