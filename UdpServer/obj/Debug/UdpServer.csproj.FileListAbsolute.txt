@@ -1,0 +1,5 @@
+E:\workspace\TestLibrary\UdpServer\bin\Debug\UdpServer.exe.config
+E:\workspace\TestLibrary\UdpServer\bin\Debug\UdpServer.exe
+E:\workspace\TestLibrary\UdpServer\bin\Debug\UdpServer.pdb
+E:\workspace\TestLibrary\UdpServer\obj\Debug\UdpServer.exe
+E:\workspace\TestLibrary\UdpServer\obj\Debug\UdpServer.pdb

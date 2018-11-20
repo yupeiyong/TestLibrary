@@ -1,0 +1,5 @@
+E:\workspace\TestLibrary\UdpClient\bin\Debug\UdpClient.exe.config
+E:\workspace\TestLibrary\UdpClient\bin\Debug\UdpClient.exe
+E:\workspace\TestLibrary\UdpClient\bin\Debug\UdpClient.pdb
+E:\workspace\TestLibrary\UdpClient\obj\Debug\UdpClient.exe
+E:\workspace\TestLibrary\UdpClient\obj\Debug\UdpClient.pdb

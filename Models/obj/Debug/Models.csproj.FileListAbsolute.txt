@@ -5,6 +5,5 @@ F:\workspace\TestLibrary\Models\obj\Debug\Models.pdb
 F:\workspace\TestLibrary\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\workspace\TestLibrary\Models\bin\Debug\Models.dll
 E:\workspace\TestLibrary\Models\bin\Debug\Models.pdb
-E:\workspace\TestLibrary\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\workspace\TestLibrary\Models\obj\Debug\Models.dll
 E:\workspace\TestLibrary\Models\obj\Debug\Models.pdb

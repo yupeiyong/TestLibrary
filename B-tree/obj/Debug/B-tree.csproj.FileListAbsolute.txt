@@ -7,6 +7,5 @@ F:\workspace\TestLibrary\B-tree\obj\Debug\B-tree.pdb
 E:\workspace\TestLibrary\B-tree\bin\Debug\B-tree.exe.config
 E:\workspace\TestLibrary\B-tree\bin\Debug\B-tree.exe
 E:\workspace\TestLibrary\B-tree\bin\Debug\B-tree.pdb
-E:\workspace\TestLibrary\B-tree\obj\Debug\B-tree.csprojResolveAssemblyReference.cache
 E:\workspace\TestLibrary\B-tree\obj\Debug\B-tree.exe
 E:\workspace\TestLibrary\B-tree\obj\Debug\B-tree.pdb

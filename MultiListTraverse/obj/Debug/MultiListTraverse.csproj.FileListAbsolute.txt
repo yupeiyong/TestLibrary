@@ -7,6 +7,5 @@ F:\workspace\TestLibrary\MultiListTraverse\obj\Debug\MultiListTraverse.pdb
 E:\workspace\TestLibrary\MultiListTraverse\bin\Debug\MultiListTraverse.exe.config
 E:\workspace\TestLibrary\MultiListTraverse\bin\Debug\MultiListTraverse.exe
 E:\workspace\TestLibrary\MultiListTraverse\bin\Debug\MultiListTraverse.pdb
-E:\workspace\TestLibrary\MultiListTraverse\obj\Debug\MultiListTraverse.csprojResolveAssemblyReference.cache
 E:\workspace\TestLibrary\MultiListTraverse\obj\Debug\MultiListTraverse.exe
 E:\workspace\TestLibrary\MultiListTraverse\obj\Debug\MultiListTraverse.pdb
