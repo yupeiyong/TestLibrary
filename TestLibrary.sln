@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject", "TestProject\TestProject.csproj", "{1E28F7CC-6FA1-4EA2-BE39-6FF6A3FF84AF}"
 EndProject
@@ -53,6 +53,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpServer", "UdpServer\UdpServer.csproj", "{BA94336B-CAA1-4DB0-80DC-3F44FE3C71DD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UdpClienter", "UdpClient\UdpClienter.csproj", "{433C6A40-E203-49A2-9929-D7F0C382914C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "动态规划求三角形数字之和最大", "动态规划求三角形数字之和最大\动态规划求三角形数字之和最大.csproj", "{AE26B555-823C-4456-A2D9-78293F0E0E2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "动态解打劫房屋问题", "动态解打劫房屋问题\动态解打劫房屋问题.csproj", "{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +144,14 @@ Global
 		{433C6A40-E203-49A2-9929-D7F0C382914C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{433C6A40-E203-49A2-9929-D7F0C382914C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{433C6A40-E203-49A2-9929-D7F0C382914C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE26B555-823C-4456-A2D9-78293F0E0E2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE26B555-823C-4456-A2D9-78293F0E0E2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE26B555-823C-4456-A2D9-78293F0E0E2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE26B555-823C-4456-A2D9-78293F0E0E2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -159,6 +171,8 @@ Global
 		{CA5A7605-2FFB-4ED8-BB24-2557F8CE5503} = {CEA4AA11-09D4-4BC1-9C81-1455EC617218}
 		{BA94336B-CAA1-4DB0-80DC-3F44FE3C71DD} = {56C7AED3-F138-4A07-B0FA-B5F1669BE8E0}
 		{433C6A40-E203-49A2-9929-D7F0C382914C} = {56C7AED3-F138-4A07-B0FA-B5F1669BE8E0}
+		{AE26B555-823C-4456-A2D9-78293F0E0E2B} = {26D97F1C-CD16-437F-8B3D-8A64B00FDBCF}
+		{1CFE61DB-C3A6-4D0C-8E8D-0E458E7DC94B} = {26D97F1C-CD16-437F-8B3D-8A64B00FDBCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {635E9A75-B105-481D-84AE-715AAB31D8D0}
