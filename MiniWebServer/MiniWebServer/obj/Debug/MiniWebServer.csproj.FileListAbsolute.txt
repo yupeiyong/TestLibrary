@@ -7,3 +7,10 @@ E:\workspace\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.pdb
 E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.exe.config
 E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.exe
 E:\workspace\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.pdb
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.exe.config
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.exe
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\bin\Debug\MiniWebServer.pdb
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.csprojAssemblyReference.cache
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.csproj.CoreCompileInputs.cache
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.exe
+F:\Projects\TestLibrary\MiniWebServer\MiniWebServer\obj\Debug\MiniWebServer.pdb

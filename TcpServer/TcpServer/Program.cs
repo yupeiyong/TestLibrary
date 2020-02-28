@@ -18,7 +18,7 @@ namespace TcpServer
         {
             //声明一个socket
             var server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            const int port = 5600;
+            const int port = 5700;
             var ipAddress = IPAddress.Any;
             server.Bind(new IPEndPoint(ipAddress, port));
             server.Listen(20);
@@ -86,6 +86,8 @@ namespace TcpServer
                 {
                     try
                     {
+                        if (proxy.Connected == false)
+                            break;
                         readLength = proxy.Receive(receiveBuffers);
                         var tmpBuffers = new byte[readLength];
                         Buffer.BlockCopy(receiveBuffers, 0, tmpBuffers, 0, readLength);

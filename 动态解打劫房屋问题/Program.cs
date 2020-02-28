@@ -60,6 +60,10 @@ namespace 动态解打劫房屋问题
             return arr2[n];
         }
 
+        /*
+        【动态规划思路】状态是打劫前n个房屋的最大收益f(n)，状态转移方程式：f(n) = max{f(n-1), A[n]+f(n-2)}。 即打劫前n个房屋的最大收益是是否选择打劫当前房屋这个决定产生的两个结果的最大值。
+复制代码
+         */
         static int Dy2(int[] arr)
         {
             if (arr == null || arr.Length == 0)

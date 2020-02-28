@@ -4,3 +4,10 @@ F:\workspace\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.pdb
 F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.csprojResolveAssemblyReference.cache
 F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.exe
 F:\workspace\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.pdb
+F:\Projects\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.exe.config
+F:\Projects\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.exe
+F:\Projects\TestLibrary\TcpClient\TcpClient\bin\Debug\TcpClient.pdb
+F:\Projects\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.csprojAssemblyReference.cache
+F:\Projects\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.csproj.CoreCompileInputs.cache
+F:\Projects\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.exe
+F:\Projects\TestLibrary\TcpClient\TcpClient\obj\Debug\TcpClient.pdb
